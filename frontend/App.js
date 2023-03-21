@@ -80,7 +80,7 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
         }
       </section>
       <section id="messages">
-        <h2>Messages</h2>
+        <h2 style={{paddingLeft:'45%'}}>Messages</h2>
         { !!messages.length ? <Messages messages={messages}/> : <p>No messages yet.</p> }
       </section>
       <section id="about">
