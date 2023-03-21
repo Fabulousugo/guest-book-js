@@ -4,14 +4,14 @@
 
 html {
   --bg: #e6b104;
-  --fg: #25282A;
-  --gray: #888;
-  --royal: #0072CE;
-  --blue: #6AD1E3;
-  --primary: #93b0df;
+  --fg: #ebeeef;
+  --gray: #e1cece;
+  --royal: #e2e9ef;//
+  --blue: #e0e9ea;//texts
+  --primary: #71f208;//signIn and signOut buttons
   --secondary: var(--royal);
   --tertiary: #FF585D;
-
+  background-image: url(https://cdn.bitdegree.org/learn/space.jpeg);       
   background-color: var(--bg);
   color: var(--fg);
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
@@ -96,8 +96,8 @@ input[type="number"] {
 }
 
 button, input {
-  background: transparent;
-  color: inherit;
+  background:fixed transparent;
+  color:whitesmoke;
   cursor: pointer;
   font: inherit;
   outline: none;

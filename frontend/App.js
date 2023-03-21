@@ -37,7 +37,7 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
     <main>
       <nav style={{ display: 'flex', justifyContent: 'space-between'}}>
         <a href="#">
-          <img src={Logo} alt="Logo" width="50" height="50" />
+          <img src={Logo} alt="Logo" width="100%" height="50%" />
         </a>
         <ul style={{ display: 'flex', listStyleType: 'none',padding:'2%' }}>
         <li><a href="#home" style={{ color: "#fff", textDecoration: "none", margin: "0 1rem" }}>Home</a></li>
@@ -70,6 +70,15 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
           : <SignIn/>
         }
       </section>
+      <section id="messages">
+        <h2>Messages</h2>
+        { !!messages.length ? <Messages messages={messages}/> : <p>No messages yet.</p> }
+      </section>
+      <section id="about">
+        <h2 style={{color:'blue'}}>About</h2>
+        <p>This is a guest book application built with NEAR Protocol.</p>
+      </section>
+
 
     </main>
   );
