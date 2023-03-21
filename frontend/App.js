@@ -56,8 +56,7 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
           
         </ul>
       </nav>
-      <CoingeckoAPI/>
-
+      
       <section id="about" class="flex-container">
         <div class="about-header">
           <h1>About Us</h1>
@@ -89,6 +88,8 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
         <p>This is a guest book application built with NEAR Protocol.</p>
       </section>
       <AboutPage/>
+      <CoingeckoAPI/>
+
       <Footer/>
 
 

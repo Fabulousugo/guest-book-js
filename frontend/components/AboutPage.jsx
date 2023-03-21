@@ -9,19 +9,19 @@ function AboutPage() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',background:'Transparent' }}>
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem', background:'navy', color:'#FFB60A' }}>About Us</h1>
-        <p style={{color: 'white'}}>{aboutText}</p>
+        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem', background:'wheat', color:'#FFB60A' }}>About Us</h1>
+        <p style={{color: 'wheat'}}>{aboutText}</p>
       </div>
      
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem', background:'navy', color:'#FFB60A' }}>Our Mission</h2>
-        <p style={{color: 'white'}}>{missionText}</p>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem', background:'wheat', color:'#FFB60A' }}>Our Mission</h2>
+        <p style={{color: 'wheat'}}>{missionText}</p>
       </div>
       <div style={{ textAlign: 'center' }}>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem', background:'navy', color:'#FFB60A' }}>Our Values</h2>
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem', background:'wheat', color:'#FFB60A' }}>Our Values</h2>
         <ul>
           {values.map((value, index) => (
-            <li key={index} style={{ marginBottom: '0.5rem', color:'white' }}>{value}</li>
+            <li key={index} style={{ marginBottom: '0.5rem', color:'wheat' }}>{value}</li>
           ))}
         </ul>
       </div>

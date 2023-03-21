@@ -63,7 +63,7 @@ const CoingeckoAPI = () => {
 
   return (
     <section id='CoinList'> 
-    <div style={{background:'navy'}}>
+    <div style={{background:'wheat'}}>
       <h1 className="header" style={{ textAlign: 'center',fontSize:'30px',background:'#000914',color:'#FFB60A' }}>
         Popular Coins
       </h1>
