@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import SignIn from './components/SignIn';
 import Messages from './components/Messages';
+import Logo from './images/2009__1.png';
+
 
 const App = ({ isSignedIn, guestBook, wallet }) => {
   const [messages, setMessages] = useState([]);
@@ -33,20 +35,21 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
 
   return (
     <main>
-      <nav>
-        <ul>
+      <nav style={{ display: 'flex', justifyContent: 'space-between'}}>
+        <a href="#">
+          <img src={Logo} alt="Logo" width="50" height="50" />
+        </a>
+        <ul style={{ display: 'flex', listStyleType: 'none',padding:'2%' }}>
+        <li><a href="#home" style={{ color: "#fff", textDecoration: "none", margin: "0 1rem" }}>Home</a></li>
+        <li><a href="#about" style={{ color: "#fff", textDecoration: "none", margin: "0 1rem" }}>About</a></li>
+        <li><a href="#contact" style={{ color: "#fff", textDecoration: "none", margin: "0 1rem" }}>Contact</a></li>
           <li>
-            <a href="#">
-              <img src="path/to/logo.png" alt="Logo" width="50" height="50" />
-            </a>
+            { isSignedIn
+              ? <button onClick={signOut}>Log out</button>
+              : <button onClick={signIn}>Log in</button>
+            }
           </li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#messages">Messages</a></li>
-          <li>{ isSignedIn
-            ? <button onClick={signOut}>Log out</button>
-            : <button onClick={signIn}>Log in</button>
-          }</li>
-          <li><a href="#form">Add Message</a></li>
+          
         </ul>
       </nav>
 
