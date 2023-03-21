@@ -3,7 +3,10 @@ import Form from './components/Form';
 import SignIn from './components/SignIn';
 import Messages from './components/Messages';
 import Logo from './images/2009__1.png';
-
+import Image from './images/bitcoin-.jpg';
+import AboutPage from './components/AboutPage';
+import CoingeckoAPI from './components/CoingeckoAPI';
+import Footer from './components/Footer';
 
 const App = ({ isSignedIn, guestBook, wallet }) => {
   const [messages, setMessages] = useState([]);
@@ -35,6 +38,7 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
 
   return (
     <main>
+    
       <nav style={{ display: 'flex', justifyContent: 'space-between'}}>
         <a href="#">
           <img src={Logo} alt="Logo" width="100%" height="50%" />
@@ -52,10 +56,16 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
           
         </ul>
       </nav>
+      <CoingeckoAPI/>
 
-      <section id="about">
-        <h2>About</h2>
-        <p>This is a guest book application built with NEAR Protocol.</p>
+      <section id="about" class="flex-container">
+        <div class="about-header">
+          <h1>About Us</h1>
+        </div>
+        <img src={''} alt="about image" class="about-image"/>
+        <div class="about-text">
+          <p>This is a guest book application built with NEAR Protocol.</p>
+        </div>
       </section>
 
       <section id="messages">
@@ -78,6 +88,8 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
         <h2 style={{color:'blue'}}>About</h2>
         <p>This is a guest book application built with NEAR Protocol.</p>
       </section>
+      <AboutPage/>
+      <Footer/>
 
 
     </main>
