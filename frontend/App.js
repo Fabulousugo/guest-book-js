@@ -57,7 +57,7 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
         </ul>
       </nav>
       
-      <section id="about" class="flex-container">
+      {/* <section id="about" class="flex-container">
         <div class="about-header">
           <h1>About Us</h1>
         </div>
@@ -65,28 +65,28 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
         <div class="about-text">
           <p>This is a guest book application built with NEAR Protocol.</p>
         </div>
-      </section>
+      </section> */}
 
-      <section id="messages">
+      {/* <section id="messages" style={{paddingLeft:'45%'}}>
         <h2>Messages</h2>
         { !!messages.length ? <Messages messages={messages}/> : <p>No messages yet.</p> }
-      </section>
+      </section> */}
 
       <section id="form">
-        <h2>Add Message</h2>
+        {/* <h2>Add Message</h2> */}
         { isSignedIn
           ? <Form onSubmit={onSubmit} currentAccountId={wallet.accountId} />
           : <SignIn/>
         }
       </section>
-      <section id="messages">
-        <h2 style={{paddingLeft:'45%'}}>Messages</h2>
+      <section id="messages" style={{paddingLeft:'45%'}}>
+        <h2 style={{color:'orange'}}>Messages</h2>
         { !!messages.length ? <Messages messages={messages}/> : <p>No messages yet.</p> }
       </section>
-      <section id="about">
+      {/* <section id="about">
         <h2 style={{color:'blue'}}>About</h2>
         <p>This is a guest book application built with NEAR Protocol.</p>
-      </section>
+      </section> */}
       <AboutPage/>
       <CoingeckoAPI/>
 
