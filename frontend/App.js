@@ -1,4 +1,3 @@
-import 'regenerator-runtime/runtime';
 import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
 import SignIn from './components/SignIn';
@@ -11,7 +10,7 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
     guestBook.getMessages().then(setMessages);
   }, []);
 
-  onSubmit = async (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
     const { fieldset, message, donation } = e.target.elements;
@@ -34,25 +33,40 @@ const App = ({ isSignedIn, guestBook, wallet }) => {
 
   return (
     <main>
-      <table>
-        <tr>
-          <td><h1>📖 NEAR Guest Book</h1></td>
-          <td>{ isSignedIn
-          ? <button onClick={signOut}>Log out</button>
-          : <button onClick={signIn}>Log in</button>
-        }</td>
-        </tr>
-      </table>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="path/to/logo.png" alt="Logo" width="50" height="50" />
+            </a>
+          </li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#messages">Messages</a></li>
+          <li>{ isSignedIn
+            ? <button onClick={signOut}>Log out</button>
+            : <button onClick={signIn}>Log in</button>
+          }</li>
+          <li><a href="#form">Add Message</a></li>
+        </ul>
+      </nav>
 
-      <hr />
-      { isSignedIn
-        ? <Form onSubmit={onSubmit} currentAccountId={wallet.accountId} />
-        : <SignIn/>
-      }
+      <section id="about">
+        <h2>About</h2>
+        <p>This is a guest book application built with NEAR Protocol.</p>
+      </section>
 
-      <hr />
+      <section id="messages">
+        <h2>Messages</h2>
+        { !!messages.length ? <Messages messages={messages}/> : <p>No messages yet.</p> }
+      </section>
 
-      { !!messages.length && <Messages messages={messages}/> }
+      <section id="form">
+        <h2>Add Message</h2>
+        { isSignedIn
+          ? <Form onSubmit={onSubmit} currentAccountId={wallet.accountId} />
+          : <SignIn/>
+        }
+      </section>
 
     </main>
   );
